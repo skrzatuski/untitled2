@@ -1,5 +1,4 @@
 public class DisplayMenu {
-
     void DisplayChooseMenu(){
         System.out.println("------------------------------");
         System.out.println("             MENU             ");
@@ -7,5 +6,10 @@ public class DisplayMenu {
         System.out.println("1 - Dokonaj rezerwacji");
         System.out.println("2 - Weświetl rezerwacje");
         System.out.println("3 - Usun rezerwacje");
+    }
+    void DisplayReservationMenu(){
+        System.out.println("------------------------------");
+        System.out.println("          REZERWACJE          ");
+        System.out.println("------------------------------");
     }
 }

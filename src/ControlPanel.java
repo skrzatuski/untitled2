@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class ControlPanel extends Database {
     int wybor;
-
     DisplayMenu dmenu1 = new DisplayMenu();
     Scanner chmenu = new Scanner(System.in);
-
     void ChooseMenu(){
         dmenu1.DisplayChooseMenu();
         wybor = chmenu.nextInt();
@@ -15,10 +13,9 @@ public class ControlPanel extends Database {
                 DoReservation();
                 break;
             case 2:
-
+                ShowReservation();
                 break;
             case 3:
-
                 break;
         }
     }

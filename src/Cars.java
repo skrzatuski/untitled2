@@ -9,8 +9,8 @@ public class Cars {
     public static void main(String[] args) {
         ControlPanel c1 = new ControlPanel();
         Database d1 = new Database();
-
-        c1.ChooseMenu();
-        //d1.Connection();
+        do{
+            c1.ChooseMenu();
+        }while(true);
         }
 }
