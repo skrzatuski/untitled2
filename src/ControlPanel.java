@@ -1,22 +1,27 @@
-import javax.xml.crypto.Data;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class ControlPanel extends Database {
-    int wybor;
+    String wybor;
     DisplayMenu dmenu1 = new DisplayMenu();
-    Scanner chmenu = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
     void ChooseMenu(){
-        dmenu1.DisplayChooseMenu();
-        wybor = chmenu.nextInt();
-        switch(wybor){
-            case 1:
-                DoReservation();
-                break;
-            case 2:
-                ShowReservation();
-                break;
-            case 3:
-                break;
-        }
+            try {
+                dmenu1.DisplayChooseMenu();
+                wybor = input.next();
+                if (wybor.equals("1")||wybor.equals("2")||wybor.equals("3")) {
+                    if(wybor.equals("1")) {
+                        DoReservation();
+                    }else if(wybor.equals("2")) {
+                        ShowReservation();
+                    }else if(wybor.equals("3")){
+
+                    }
+                }else{
+                    throw new InputMismatchException("Not valid choice");
+                }
+            }catch(InputMismatchException ex){
+                System.out.println("Zły wybór, wybierz ponownie");
+            }
     }
 }
